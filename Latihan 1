@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    int x, y, z;
+    cout << "Masukkan Bilangan x :" << endl;
+    cin >> x;
+    cout << "Masukkan Bilangan y :" << endl;
+    cin >> y;
+    z = x + y;
+    
+    cout << x << " + " << y << " = " << z << endl;
+    if (z>=0) {
+        cout << "Nilai " << z << " adalah bilangan positif" << endl;
+    } else if (z<0) {
+        cout << "Nilai " << z << " adalah bilangan negatif" << endl;
+    }
+    cout << "Program ini adalah program berhitung" << endl;
+    return 0;
+}
