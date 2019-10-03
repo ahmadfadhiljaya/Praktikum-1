@@ -1,0 +1,92 @@
+#include <iostream>
+
+using namespace std;
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   int belanja;
+   int batas_diskon = 1102019;
+   int total_harga;
+
+   cout << "Silahkan masukkan status Anda:" << endl ;
+   cout << "Input 'a' (menikah dan memiliki anak), 'b' (menikah dan belum memiliki anak)" ;
+   cout << "'c' (belum menikah dan memiliki kartu anggota), 'd' (menikah tapi tidak memiliki kartu anggota): " ;
+   string status;
+   cin >> status;
+   cout << "Total belanja Anda : " ;
+   cin >> belanja;
+
+   if (status == "a")
+   {
+     if (belanja >= batas_diskon)
+     {
+       cout << "Diskon 75%" << endl;
+       total_harga = belanja - (belanja * 0.75);
+   }
+   else
+   {
+       cout << "Diskon 0%" << endl;
+       total_harga = belanja - (belanja * 0);
+     }
+   }
+   if (status == "b")
+   {
+       if (belanja >= batas_diskon)
+       {
+           cout << "Diskon 50%" << endl;
+           total_harga = belanja - (belanja * 0.50);
+       }
+       else
+       {
+           cout << "Diskon 0%" << endl;
+           total_harga - belanja - (belanja * 0);
+       }
+   }
+   if (status == "c")
+   {
+       if (belanja >= batas_diskon)
+       {
+           cout << "Diskon 25%" << endl;
+           total_harga = belanja - (belanja * 0.25);
+       }
+       else
+       {
+           cout << "Diskon 0%" << endl;
+           total_harga = belanja - (belanja * 0);
+       }
+   }
+   if (status == "d")
+   {
+       if (belanja >= batas_diskon)
+       {
+           cout << "Diskon 10%" << endl;
+           total_harga = belanja - (belanja * 0.10);
+       }
+       else
+       {
+           cout << "Diskon 0%" << endl;
+           total_harga = belanja - (belanja * 0.20);
+       }
+   }
+   cout << "Total harga yang dibayar hanya : "<< total_harga << endl;
+   cout << "Apakah anda orang makassar asli (YA atau TIDAK):" ;
+   string asal;
+   cin >> asal;
+
+   if (asal == "TIDAK")
+{
+    cout << "Anda Mendapatkan Tambahan diskon 10%" << endl;
+    total_harga = total_harga - (total_harga * 0.10);
+}
+else
+{
+    total_harga = total_harga ;
+}
+cout << "Harga keseluruhan dari total belanja: " << total_harga << endl ;
+
+return 0;
+}
